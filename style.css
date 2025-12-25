@@ -1,0 +1,135 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://static.vecteezy.com/system/resources/previews/013/367/743/non_2x/digital-drawing-of-blurred-watercolor-paints-in-purple-color-free-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    min-width: 450px;
+    position: absolute;
+    min-height: 100px;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+#newtask{
+    position: relative;
+    padding: 30px 20px;
+}
+
+#newtask input{
+    width: 85%;
+    height: 45px;
+    padding: 12px;
+    color: #333333;
+    font-weight: 500;
+    position: relative;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    border: 2px solid #e0e0e0;
+    background: #f8f9fa;
+}
+
+#newtask input:focus{
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+}
+
+#newtask button{
+    position: relative;
+    float: right;
+    font-weight: 500;
+    background-color: #2563eb;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    width: 12%;
+    height: 45px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#newtask button:hover{
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+}
+
+#tasks{
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    padding: 20px 20px;
+    margin-top: 10px;
+}
+
+.task{
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    height: 50px;
+    margin-bottom: 12px;
+    padding: 5px 15px;
+    display: flex;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task:hover{
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.task span{
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    flex-grow: 1;
+}
+
+.task button{
+    background-color: #ef4444;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 35px;
+    width: 35px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.task button:hover{
+    background-color: #dc2626;
+    transform: scale(1.1);
+}

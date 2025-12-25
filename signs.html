@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Дорожные знаки</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <style>
+        .tooltip {
+            position: relative;
+        }
+        .tooltip .ui-tooltip {
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            z-index: 1;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        img {
+            margin-right: 10px;
+            vertical-align: middle;
+            width: 60px; /* Любой удобный размер */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <img src="/WEB-приложения/signs/1_2.svg" class="tooltip" data-hint="1.1 Железнодорожный переезд без шлагбаума">
+        <img src="/WEB-приложения/signs/1_3_1.svg" class="tooltip" data-hint="1.2 Однопутная железная дорога">
+        <img src="/WEB-приложения/signs/1_5.svg" class="tooltip" data-hint="1.3 Пересечение с трамвайной линией">
+        <img src="/WEB-приложения/signs/1_8.svg" class="tooltip" data-hint="1.4 Светофорное регулирование">
+        <img src="/WEB-приложения/signs/1_9.svg" class="tooltip" data-hint="1.5 Разводной мост">
+    </p>
+    <p>
+        <img src="/WEB-приложения/signs/1_10.svg" class="tooltip" data-hint="2.1 Выезд на набережную">
+        <img src="/WEB-приложения/signs/1_16.svg" class="tooltip" data-hint="2.2 Неровная дорога">
+        <img src="/WEB-приложения/signs/1_18.svg" class="tooltip" data-hint="2.3 Выброс гравия">
+        <img src="/WEB-приложения/signs/1_19.svg" class="tooltip" data-hint="2.4 Опасная обочина">
+        <img src="/WEB-приложения/signs/1_22.svg" class="tooltip" data-hint="2.5 Пешеходный переход">
+    </p>
+    <p>
+        <img src="/WEB-приложения/signs/1_23.svg" class="tooltip" data-hint="3.1 Дети">
+        <img src="/WEB-приложения/signs/1_24.svg" class="tooltip" data-hint="3.2 Пересечение с велосипедной дорожкой">
+        <img src="/WEB-приложения/signs/1_25.svg" class="tooltip" data-hint="3.3 Дорожные работы">
+        <img src="/WEB-приложения/signs/1_26.svg" class="tooltip" data-hint="3.4 Перегон скота">
+        <img src="/WEB-приложения/signs/1_27.svg" class="tooltip" data-hint="3.5 Дикие животные">
+    </p>
+    <script>
+        $(function () {
+            $(document).tooltip({
+                items: "img",
+                content: function () {
+                    var $element = $(this);
+                    if ($element.is("img")) {
+                        return $element.data('hint');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
